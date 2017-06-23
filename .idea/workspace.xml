@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbd75f4f-9624-4014-868d-931364239ea8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -762,7 +761,7 @@
       <workItem from="1498219131781" duration="4141000" />
       <workItem from="1498223884193" duration="151000" />
       <workItem from="1498224266282" duration="165000" />
-      <workItem from="1498233242936" duration="2192000" />
+      <workItem from="1498233242936" duration="2207000" />
     </task>
     <task id="LOCAL-00001" summary="Added confirm and reject xhtml files">
       <created>1498222821941</created>
@@ -785,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498235394069</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edited .gitignore">
+      <created>1498235462283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1498235462283</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9049000" />
+    <option name="totallyTimeSpent" value="9064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -843,7 +849,8 @@
     <MESSAGE value="Added confirm and reject xhtml files" />
     <MESSAGE value="Added Testcontroller" />
     <MESSAGE value="Added error messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added error messages" />
+    <MESSAGE value="Edited .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
