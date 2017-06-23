@@ -41,6 +41,6 @@ public class RegisterController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "/reject.xhml";
+        return "reject";
     }
 }

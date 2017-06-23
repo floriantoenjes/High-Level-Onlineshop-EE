@@ -5,7 +5,14 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-   <f:view>
-      <h:outputLabel value="Hello, world"/>
-   </f:view>
+   <!--<f:view>-->
+      <!--<h:outputLabel value="Hello, world"/>-->
+   <!--</f:view>-->
+    <h:form>
+        <h:selectOneRadio value="#{testController.day}">
+            <f:selectItems value="#{testController.days}"/>
+        </h:selectOneRadio>
+        <h:commandButton value="Submit"/>
+    </h:form>
+<h:outputText value="#{testController.day}"/>
 </html>
