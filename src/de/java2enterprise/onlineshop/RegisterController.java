@@ -15,7 +15,7 @@ import javax.transaction.UserTransaction;
 @RequestScoped
 public class RegisterController {
 
-    @PersistenceUnit()
+    @PersistenceUnit
     private EntityManagerFactory emf;
 
     @Resource
@@ -37,9 +37,10 @@ public class RegisterController {
             ut.begin();
             emf.createEntityManager().persist(customer);
             ut.commit();
+            return "confirm";
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "/register.xhtml";
+        return "/reject.xhml";
     }
 }
