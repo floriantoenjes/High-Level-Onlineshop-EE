@@ -4,6 +4,8 @@ import de.java2enterprise.onlineshop.model.Customer;
 
 import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManagerFactory;
@@ -37,10 +39,13 @@ public class RegisterController {
             ut.begin();
             emf.createEntityManager().persist(customer);
             ut.commit();
-            return "confirm";
+            FacesMessage m = new FacesMessage("Successfully registered!");
+            FacesContext.getCurrentInstance().addMessage("registerForm", m);
         } catch (Exception e) {
             e.printStackTrace();
+            FacesContext.getCurrentInstance().addMessage("registerForm", new FacesMessage(e.getMessage(),
+                    e.getCause().getMessage()));
         }
-        return "reject";
+        return "register.xhtml";
     }
 }

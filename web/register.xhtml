@@ -12,17 +12,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </h:head>
 <h:body>
-    <h:form>
-        <h:panelGrid columns="2">
+    <h:messages globalOnly="true"/>
+    <h:form id="registerForm" prependId="false">
+        <h:message for="registerForm" showSummary="true"/>
+        <h:panelGrid columns="3">
             <f:facet name="header">
                 <h:outputText value="Registrieren"/>
             </f:facet>
             <h:outputLabel value="E-Mail:"/>
-            <h:inputText value="#{registerController.customer.email}"></h:inputText>
+            <h:inputText id="email" value="#{registerController.customer.email}"></h:inputText>
+            <h:message for="email"/>
             <h:outputLabel value="Kennwort:"/>
-            <h:inputSecret value="#{registerController.customer.password}"></h:inputSecret>
+            <h:inputSecret id="password" value="#{registerController.customer.password}"></h:inputSecret>
+            <h:message for="password"/>
             <h:commandButton action="index.xhtml" immediate="true" value="Abbrechen"/>
-            <h:commandButton action="#{registerController.persist}" value="Registrieren"/>
+            <h:commandButton id="register" action="#{registerController.persist}" value="Registrieren"/>
+            <h:message for="register"/>
         </h:panelGrid>
     </h:form>
 </h:body>
