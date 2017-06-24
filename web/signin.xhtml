@@ -5,34 +5,34 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:define name="content">
         <h:form
-                id="registerForm"
+                id="signinForm"
                 prependId="false">
             <h:message
-                    for="registerForm"
+                    for="signinForm"
                     showSummary="true"/>
             <h:panelGrid columns="3">
                 <f:facet name="header">
-                    <h:outputText value="#{msg['register']}"/>
+                    <h:outputText value="#{msg['signin']}"/>
                 </f:facet>
                 <h:outputLabel
                         value="#{msg['email']}:"/>
                 <h:inputText
                         id="email"
-                        value="#{registerController.customer.email}">
+                        value="#{signinController.email}">
                 </h:inputText>
                 <h:message for="email"/>
                 <h:outputLabel
                         value="#{msg['password']}:"/>
                 <h:inputSecret
                         id="password"
-                        value="#{registerController.customer.password}">
+                        value="#{signinController.password}">
                 </h:inputSecret>
                 <h:message for="password"/>
                 <h:commandButton
-                        id="register"
-                        action="#{registerController.persist()}"
-                        value="#{msg['register']}" />
-                <h:message for="register"/>
+                        id="signin"
+                        action="#{signinController.find()}"
+                        value="#{msg['signin']}" />
+                <h:message for="signin"/>
             </h:panelGrid>
         </h:form>
     </ui:define>
