@@ -20,7 +20,9 @@
                 <h:outputText value="Registrieren"/>
             </f:facet>
             <h:outputLabel value="E-Mail:"/>
-            <h:inputText id="email" value="#{registerController.customer.email}"></h:inputText>
+            <h:inputText id="email" value="#{registerController.customer.email}" required="true" label="E-Mail">
+                <f:validator validatorId="emailValidator"/>
+            </h:inputText>
             <h:message for="email"/>
             <h:outputLabel value="Kennwort:"/>
             <h:inputSecret id="password" value="#{registerController.customer.password}"></h:inputSecret>
