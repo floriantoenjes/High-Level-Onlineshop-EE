@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 @Named
 @RequestScoped
 public class SellController implements Serializable {
-    private static final Long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     private final static int MAX_IMAGE_LENGTH = 400;
 

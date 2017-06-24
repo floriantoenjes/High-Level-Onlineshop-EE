@@ -19,7 +19,7 @@ import java.util.List;
 @Named
 @SessionScoped
 public class SigninController implements Serializable {
-    private static final Long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     @PersistenceUnit
     private EntityManagerFactory emf;
