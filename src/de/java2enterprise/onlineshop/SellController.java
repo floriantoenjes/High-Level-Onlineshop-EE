@@ -84,7 +84,13 @@ public class SellController implements Serializable {
             FacesContext.getCurrentInstance().addMessage("sellForm", m);
         } catch (Exception e) {
             e.printStackTrace();
-            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_WARN, e.getMessage(), e.getCause().getMessage());
+            FacesMessage fm;
+            if (e.getCause() != null) {
+                fm = new FacesMessage(FacesMessage.SEVERITY_WARN, e.getMessage(), e.getCause().getMessage());
+            } else {
+                fm = new FacesMessage(e.getMessage());
+            }
+            FacesContext.getCurrentInstance().addMessage("sellForm", fm);
         }
         return "sell.xhtml";
     }
