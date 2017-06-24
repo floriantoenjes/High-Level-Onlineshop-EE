@@ -39,12 +39,13 @@ public class RegisterController {
             emf.createEntityManager().persist(customer);
             ut.commit();
 
-            FacesMessage m = new FacesMessage("Successfully registered!");
+            FacesMessage m = new FacesMessage("Successfully registered!",
+                    "Your email was saved under id " + customer.getId());
             FacesContext.getCurrentInstance().addMessage("registerForm", m);
         } catch (Exception e) {
             e.printStackTrace();
-            FacesContext.getCurrentInstance().addMessage("registerForm", new FacesMessage(e.getMessage(),
-                    e.getCause().getMessage()));
+            FacesContext.getCurrentInstance().addMessage("registerForm", new FacesMessage(FacesMessage.SEVERITY_WARN,
+                    e.getMessage(), e.getCause().getMessage()));
         }
         return "register.xhtml";
     }

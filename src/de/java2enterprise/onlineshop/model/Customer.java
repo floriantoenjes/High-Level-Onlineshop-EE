@@ -42,15 +42,9 @@ public class Customer implements Serializable {
 			strategy=GenerationType.SEQUENCE, 
 			generator="CUSTOMER_ID_GENERATOR")
 	private Long id;
-
-	@NotNull
-    @Min(value = 6)
-    @Max(value = 40)
+	
 	private String email;
 
-	@NotNull
-    @Min(value = 6)
-    @Max(value = 10)
 	private String password;
 
 	//bi-directional many-to-one association to Item
