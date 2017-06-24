@@ -12,6 +12,9 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * 
@@ -40,8 +43,14 @@ public class Customer implements Serializable {
 			generator="CUSTOMER_ID_GENERATOR")
 	private Long id;
 
+	@NotNull
+    @Min(value = 6)
+    @Max(value = 40)
 	private String email;
 
+	@NotNull
+    @Min(value = 6)
+    @Max(value = 10)
 	private String password;
 
 	//bi-directional many-to-one association to Item
