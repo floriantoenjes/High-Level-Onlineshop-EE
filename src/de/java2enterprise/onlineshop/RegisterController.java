@@ -9,7 +9,6 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceUnit;
 import javax.transaction.UserTransaction;
 
@@ -39,6 +38,7 @@ public class RegisterController {
             ut.begin();
             emf.createEntityManager().persist(customer);
             ut.commit();
+
             FacesMessage m = new FacesMessage("Successfully registered!");
             FacesContext.getCurrentInstance().addMessage("registerForm", m);
         } catch (Exception e) {
